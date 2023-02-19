@@ -1,9 +1,17 @@
 [versions]
 lombok = '1.18.24'
 jb-annotation = '23.1.0'
+jackson = '2.14.2'
+groovy = '4.0.9'
+spock = '2.3-groovy-4.0'
+byte-buddy = '1.14.0'
 
 [libraries]
 lombok = { module = 'org.projectlombok:lombok', version.ref = 'lombok' }
 jetbrains-annotations = { module = 'org.jetbrains:annotations', version.ref = 'jb-annotation' }
-
+jackson-databind = { module = 'com.fasterxml.jackson.core:jackson-databind', version.ref = 'jackson' }
+groovy-all = { module = 'org.apache.groovy:groovy-all', version.ref = 'groovy' }
+spock-core = { module = 'org.spockframework:spock-core', version.ref = 'spock' }
+byte-buddy = { module = 'net.bytebuddy:byte-buddy', version.ref = 'byte-buddy' }
 [bundles]
+test-spock-common = ["spock-core", 'groovy-all', 'byte-buddy']
