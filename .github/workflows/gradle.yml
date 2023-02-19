@@ -9,12 +9,19 @@ name: Java CI with Gradle
 
 on:
   workflow_dispatch:
+    branches:
+      - 'main'
+      - 'GEOIP-**'
   push:
     branches:
     - 'main'
     - 'GEOIP-**'
   pull_request:
     branches: [ "main" ]
+    
+concurrency:
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
