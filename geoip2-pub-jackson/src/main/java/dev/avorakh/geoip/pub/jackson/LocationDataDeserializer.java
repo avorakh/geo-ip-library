@@ -28,10 +28,10 @@ public class LocationDataDeserializer extends StdDeserializer<LocationData> {
 
         var jsonNode = (JsonNode) jsonParser.getCodec().readTree(jsonParser);
 
-        var countyIsoCodeNode = jsonNode.get("countyIsoCode");
+        var countyIsoCodeNode = jsonNode.get(LocationDataConstants.Fields.countyIsoCode);
         var countyIsoCode = countyIsoCodeNode.asText();
 
-        var timeZoneNode = jsonNode.get("timeZone");
+        var timeZoneNode = jsonNode.get(LocationDataConstants.Fields.timeZone);
         var timeZone = timeZoneNode == null ? null : timeZoneNode.asText();
 
         return LocationData.builder()

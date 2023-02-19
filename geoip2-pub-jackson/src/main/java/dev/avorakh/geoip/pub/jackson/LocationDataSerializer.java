@@ -25,13 +25,13 @@ public class LocationDataSerializer extends StdSerializer<LocationData> {
     public void serialize(@NotNull LocationData value, @NotNull JsonGenerator generator, @Nullable SerializerProvider provider) throws IOException {
 
         generator.writeStartObject();
-
-        generator.writeStringField("countyIsoCode", value.countyIsoCode());
+        
+        generator.writeStringField(LocationDataConstants.Fields.countyIsoCode, value.countyIsoCode());
 
         if (value.timeZone() != null) {
-            generator.writeStringField("timeZone", value.timeZone());
+            generator.writeStringField(LocationDataConstants.Fields.timeZone, value.timeZone());
         }
-
+        
         generator.writeEndObject();
     }
 }
