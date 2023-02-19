@@ -1,5 +1,4 @@
-# geo-ip-library 
-version* x.x.x
+# geo-ip-library 0.1.4
 
 ## Description
 This demo library is responsible to provide the geolocation details based on an IP address.

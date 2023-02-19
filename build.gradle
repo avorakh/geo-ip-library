@@ -6,7 +6,7 @@ scmVersion {
     versionCreator("versionWithBranch")
 
     hooks {
-        pre("fileUpdate", [file: "README.md", pattern: {v,p -> /(version.) $v/}, replacement: {v, p -> "\$1 $v"}])
+        pre("fileUpdate", [file: "README.md", pattern: {v,p -> /geo-ip-library $v/}, replacement: {v, p -> "\$1 $v"}])
         pre("commit")
     }
 }
