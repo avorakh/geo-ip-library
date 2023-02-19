@@ -1,5 +1,15 @@
+plugins {
+    id 'pl.allegro.tech.build.axion-release' version '1.14.4'
+}
+
+scmVersion {
+}
+
+allprojects {
+    project.version = scmVersion.version
+}
+
 group = 'dev.avorakh.geoip'
-rootProject.version = '0.1.0'
 
 subprojects {
 
