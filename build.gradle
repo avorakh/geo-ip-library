@@ -13,7 +13,7 @@ scmVersion {
 }
 
 group = 'dev.avorakh.geoip'
-// geo-ip-library version: 0.1.7
+// geo-ip-library version: 0.1.8
 
 allprojects {
     project.version = scmVersion.version
