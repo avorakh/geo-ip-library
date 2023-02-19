@@ -4,3 +4,4 @@ enableFeaturePreview("VERSION_CATALOGS")
 rootProject.name = 'geo-ip-library'
 
 include 'geoip2-pub-common'
+include 'geoip2-pub-jackson'
