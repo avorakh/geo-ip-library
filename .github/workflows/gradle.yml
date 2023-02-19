@@ -10,7 +10,9 @@ name: Java CI with Gradle
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches:
+    - 'main'
+    - 'GEOIP-**'
   pull_request:
     branches: [ "main" ]
 
