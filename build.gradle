@@ -3,6 +3,7 @@ plugins {
 }
 
 scmVersion {
+    
 }
 
 allprojects {
