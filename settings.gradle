@@ -2,3 +2,5 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 enableFeaturePreview("VERSION_CATALOGS")
 
 rootProject.name = 'geo-ip-library'
+
+include 'geoip2-pub-common'
