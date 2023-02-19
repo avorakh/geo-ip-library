@@ -7,15 +7,17 @@ scmVersion {
 
     hooks {
         pre("fileUpdate", [file: "README.md", pattern: {v,p -> /geo-ip-library: $v/}, replacement: {v, p -> "geo-ip-library: $v"}, encoding: 'utf-8'])
+        pre("fileUpdate", [file: 'build.gradle', pattern: {v,p -> /geo-ip-library version: $v/}, replacement: {v, p -> "geo-ip-library version: $v"}, encoding: 'utf-8'])
         pre("commit")
     }
 }
 
+group = 'dev.avorakh.geoip'
+// geo-ip-library version: 0.1.8
+
 allprojects {
     project.version = scmVersion.version
 }
-
-group = 'dev.avorakh.geoip'
 
 subprojects {
 
